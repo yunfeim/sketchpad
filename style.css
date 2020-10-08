@@ -1,0 +1,119 @@
+:root {
+    --sketch-controls-background-color: #ffffef;
+    --global-border-width: 0.1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: calc(100vw-2px);
+}
+
+#sketch-box {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    border: var(--global-border-width) solid #000000;
+    border-block-start-width: 0;
+}
+
+#sketch-box:hover {
+    cursor: crosshair;
+}
+
+div.controls {
+    background-color: var(--sketch-controls-background-color);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: var(--global-border-width) solid #000000;
+    height: 2em;
+}
+
+.control-item {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    height: 80%;
+    min-width: 2em;
+    margin-inline-start: 2ch;
+}
+
+.control-item.image-only {
+    border: 0;
+    outline: 0;
+}
+
+.control-item.image-only:hover, .control-item.image-only.selected {
+    border: 0.2rem solid var(--sketch-controls-background-color);
+}
+
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
+.cursor-arrow:hover {
+    cursor: default;
+}
+
+.control-item.selected {
+    box-shadow: 0 0 0.1rem #000000;
+}
+
+.control-item.has-text {
+    border-radius: 5%;
+    outline: 0;
+    border: 0.05rem solid #000000;
+    display: flex;
+    align-items: center;
+    padding: 0 1ch;
+}
+
+.control-item.has-text:hover {
+    box-shadow: 0 0 0.1rem #000000;
+}
+
+#pen-width {
+    display: flex;
+    align-items: center;
+}
+
+#pen-width>input {
+    width: 8ch;
+    margin-inline-start: 1ch;
+}
+
+#custom-color {
+    padding-inline-end: 0;
+    display: flex;
+    align-items: center;
+}
+
+#custom-color>input {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    margin-inline-start: 1ch;
+}
+
+#reset-button:hover {
+    background-color: salmon;
+    color: white;
+}
+
+#eraser-button {
+    width: 6ch;
+    background-color: transparent;
+}
+
+#eraser-button>img {
+    width: 100%;
+}

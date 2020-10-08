@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sketchpad</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="action.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="controls">
+            <button class="control-item has-text cursor-arrow" id="reset-button">RESET</button>
+            <button class="control-item image-only cursor-pointer" id="eraser-button">
+                <img src="./resources/eraser.svg" />
+            </button>
+            <template id="button-template">
+                <button class="control-item image-only cursor-pointer"></button>
+            </template>
+            <button class="control-item has-text cursor-pointer" id="custom-color"> Custom<input type="color" /></button>
+            <div class="control-item has-text cursor-arrow" id="pen-width"> Width<input type="range" min="1" max="10" step="1" value="2" />
+            </div>
+            <button id="save-button" class="control-item has-text cursor-arrow">Save</button>
+        </div>
+        <canvas id="sketch-box" data-horiz-resolution="1000">
+        </canvas>
+    </main>
+</body>
+
+</html>
