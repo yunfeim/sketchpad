@@ -44,7 +44,8 @@ getDensePoints = function* (startIV, endIV, startDV, endDV) {
     }
 
     const sign = endIV >= startIV ? 1 : -1;
-    let independentVar, dependentVar = startIV, startDV;
+    let independentVar = startIV;
+    let dependentVar = startDV;
     for (; independentVar != endIV; independentVar += sign) {
         yield [independentVar, Math.round(dependentVar)];
         dependentVar += sign * slope;
