@@ -129,8 +129,6 @@ class SketchEditor {
         this.resetCanvasParameters();
         window.addEventListener('resize',
             () => this.resetCanvasParameters());
-        window.addEventListener('scroll',
-            () => this.resetCanvasParameters());
 
         this.pen = new Pen();
         this.initializeControls(controlArea, buttonTemplate);
